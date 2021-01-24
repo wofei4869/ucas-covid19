@@ -148,7 +148,7 @@ def submit(s: requests.Session, old: dict):
         print("ly打卡失败，错误信息: ", r.json().get("m"))
 
     if api_key != "":
-        message(api_key, 'ly' + result.get('m'), new_daily)
+        message(api_key, result.get('m'), new_daily)
     if sender_email != "" and receiver_email != "":
         send_email(sender_email, sender_email_passwd, receiver_email, result.get('m'), new_daily)
 
