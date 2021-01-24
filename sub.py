@@ -202,4 +202,5 @@ def report(username, password):
 
 
 if __name__ == "__main__":
-    report(username=user, password=passwd)
+    while(True):
+        report(username=user, password=passwd)
